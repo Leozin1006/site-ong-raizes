@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": leitores de tela escolhem a pronúncia correta e o SEO identifica o idioma -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Essencial para Mobile-First: sem isso o celular simula uma tela de desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes do Amanhã | ONG de Educação e Inclusão Social</title>
+  <meta name="description" content="A ONG Raízes do Amanhã transforma vidas por meio da educação, da cultura e da inclusão social. Conheça nossa missão, história e equipe e faça parte.">
+  <meta name="author" content="ONG Raízes do Amanhã">
+  <meta name="theme-color" content="#2e7d32">
+
+  <!-- Open Graph: pré-visualização ao compartilhar em redes sociais -->
+  <meta property="og:title" content="Raízes do Amanhã | ONG de Educação e Inclusão Social">
+  <meta property="og:description" content="Transformamos vidas por meio da educação, da cultura e da inclusão social.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page page--home" id="topo">
+
+  <!-- Skip link (WCAG 2.4.1): permite a quem usa teclado pular direto ao conteúdo -->
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <!-- ============ CABEÇALHO DO SITE ============ -->
+  <!-- <header> fora de <main> = banner do site (landmark "banner") -->
+  <header class="site-header" id="cabecalho">
+    <div class="site-header__container">
+      <a class="site-header__logo" href="index.html" aria-label="Raízes do Amanhã - ir para a página inicial">
+        <img class="site-header__logo-img"
+             src="img/logo-raizes-do-amanha.svg"
+             alt="Logotipo da ONG Raízes do Amanhã: uma muda de planta crescendo dentro de um círculo verde"
+             width="48" height="48">
+        <span class="site-header__logo-texto">Raízes do Amanhã</span>
+      </a>
+
+      <!-- Botão do menu mobile: o JS futuro alternará aria-expanded e a classe de abertura -->
+      <button class="site-header__menu-toggle" id="menu-toggle" type="button"
+              aria-controls="menu-principal" aria-expanded="false">
+        <span class="site-header__menu-toggle-texto">Menu</span>
+      </button>
+
+      <!-- <nav> com aria-label: distingue esta navegação de outras na mesma página -->
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="main-nav__lista">
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html" aria-current="page">Início</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#quem-somos">Quem somos</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="projetos.html">Projetos</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#contato">Contato</a></li>
+          <li class="main-nav__item main-nav__item--destaque">
+            <a class="main-nav__link main-nav__link--cta" href="cadastro.html">Seja voluntário</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <!-- Só pode existir UM <main> por página (landmark "main") -->
+  <main id="conteudo-principal" tabindex="-1">
+
+    <!-- HERO: contém o único <h1> da página (hierarquia H1 > H2 > H3...) -->
+    <section class="hero" id="hero" aria-labelledby="hero-titulo">
+      <div class="hero__container">
+        <div class="hero__conteudo">
+          <h1 class="hero__titulo" id="hero-titulo">Educação e oportunidade para quem mais precisa</h1>
+          <p class="hero__subtitulo">Há 15 anos, a Raízes do Amanhã semeia futuro em comunidades vulneráveis por meio de educação, cultura e inclusão social.</p>
+          <div class="hero__acoes">
+            <a class="btn btn--primario" href="cadastro.html">Quero ser voluntário</a>
+            <a class="btn btn--secundario" href="projetos.html">Conhecer os projetos</a>
+          </div>
+        </div>
+
+        <!-- <figure> + <figcaption>: imagem com legenda associada semanticamente -->
+        <figure class="hero__figura">
+          <img class="hero__imagem"
+               src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80"
+               alt="Grupo de crianças sorrindo e levantando os braços durante uma atividade ao ar livre acompanhada por voluntários"
+               width="1000" height="667" fetchpriority="high">
+          <figcaption class="hero__legenda">Oficina de verão com crianças atendidas pela ONG.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SEÇÃO INSTITUCIONAL: agrupa Missão, Visão, Valores, Histórico e Equipe -->
+    <section class="institucional" id="quem-somos" aria-labelledby="institucional-titulo">
+      <header class="institucional__cabecalho">
+        <h2 class="institucional__titulo" id="institucional-titulo">Quem somos</h2>
+        <p class="institucional__intro">Uma organização sem fins lucrativos movida pela crença de que toda pessoa merece a chance de crescer.</p>
+      </header>
+
+      <!-- Missão, Visão e Valores: cada bloco é independente, então usa <article> -->
+      <div class="institucional__grade" id="missao-visao-valores">
+        <article class="cartao cartao--missao" id="missao" aria-labelledby="missao-titulo">
+          <h3 class="cartao__titulo" id="missao-titulo">Missão</h3>
+          <p class="cartao__texto">Promover o desenvolvimento humano de crianças, jovens e famílias em situação de vulnerabilidade por meio de educação de qualidade, cultura e acesso a oportunidades.</p>
+        </article>
+
+        <article class="cartao cartao--visao" id="visao" aria-labelledby="visao-titulo">
+          <h3 class="cartao__titulo" id="visao-titulo">Visão</h3>
+          <p class="cartao__texto">Ser referência nacional em transformação social comunitária, construindo uma sociedade mais justa, solidária e igualitária até 2035.</p>
+        </article>
+
+        <article class="cartao cartao--valores" id="valores" aria-labelledby="valores-titulo">
+          <h3 class="cartao__titulo" id="valores-titulo">Valores</h3>
+          <ul class="cartao__lista">
+            <li>Respeito à diversidade</li>
+            <li>Transparência na gestão</li>
+            <li>Solidariedade e empatia</li>
+            <li>Compromisso com resultados</li>
+            <li>Sustentabilidade</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- HISTÓRICO: sequência cronológica = lista ordenada <ol> -->
+      <section class="historico" id="historico" aria-labelledby="historico-titulo">
+        <h3 class="historico__titulo" id="historico-titulo">Nossa história</h3>
+        <ol class="linha-do-tempo">
+          <li class="linha-do-tempo__item">
+            <!-- <time datetime>: máquinas entendem a data; humanos leem o texto -->
+            <time class="linha-do-tempo__ano" datetime="2011">2011</time>
+            <h4 class="linha-do-tempo__titulo">O começo</h4>
+            <p class="linha-do-tempo__texto">Um grupo de cinco professores inicia aulas de reforço em uma garagem cedida por moradores do bairro.</p>
+          </li>
+          <li class="linha-do-tempo__item">
+            <time class="linha-do-tempo__ano" datetime="2015">2015</time>
+            <h4 class="linha-do-tempo__titulo">Formalização</h4>
+            <p class="linha-do-tempo__texto">A ONG é registrada oficialmente e inaugura sua primeira sede, com biblioteca comunitária.</p>
+          </li>
+          <li class="linha-do-tempo__item">
+            <time class="linha-do-tempo__ano" datetime="2019">2019</time>
+            <h4 class="linha-do-tempo__titulo">Expansão</h4>
+            <p class="linha-do-tempo__texto">Chegamos a 4 comunidades e criamos os programas de cultura e de qualificação profissional para jovens.</p>
+          </li>
+          <li class="linha-do-tempo__item">
+            <time class="linha-do-tempo__ano" datetime="2024">2024</time>
+            <h4 class="linha-do-tempo__titulo">Reconhecimento</h4>
+            <p class="linha-do-tempo__texto">Ultrapassamos 12 mil pessoas atendidas e recebemos o selo de Boas Práticas em Transparência.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- EQUIPE -->
+      <section class="equipe" id="equipe" aria-labelledby="equipe-titulo">
+        <h3 class="equipe__titulo" id="equipe-titulo">Nossa equipe</h3>
+        <ul class="equipe__lista">
+          <li class="equipe__item">
+            <!-- Cada pessoa é um conteúdo autônomo: <article> -->
+            <article class="membro">
+              <img class="membro__foto"
+                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrato de Helena Duarte, diretora-presidente, uma mulher de cabelos escuros e sorriso confiante, usando blazer azul"
+                   width="400" height="400" loading="lazy">
+              <h4 class="membro__nome">Helena Duarte</h4>
+              <p class="membro__cargo">Diretora-presidente</p>
+              <p class="membro__bio">Pedagoga com 20 anos de experiência em projetos educacionais.</p>
+            </article>
+          </li>
+          <li class="equipe__item">
+            <article class="membro">
+              <img class="membro__foto"
+                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrato de Carlos Menezes, coordenador de projetos, um homem de barba curta e camisa social clara"
+                   width="400" height="400" loading="lazy">
+              <h4 class="membro__nome">Carlos Menezes</h4>
+              <p class="membro__cargo">Coordenador de projetos</p>
+              <p class="membro__bio">Administrador especializado em gestão de projetos sociais.</p>
+            </article>
+          </li>
+          <li class="equipe__item">
+            <article class="membro">
+              <img class="membro__foto"
+                   src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrato de Marina Souza, coordenadora de voluntariado, uma jovem de cabelos cacheados sorrindo para a câmera"
+                   width="400" height="400" loading="lazy">
+              <h4 class="membro__nome">Marina Souza</h4>
+              <p class="membro__cargo">Coordenadora de voluntariado</p>
+              <p class="membro__bio">Psicóloga responsável pela capacitação e acolhimento dos voluntários.</p>
+            </article>
+          </li>
+          <li class="equipe__item">
+            <article class="membro">
+              <img class="membro__foto"
+                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrato de Rafael Lima, responsável financeiro, um homem de óculos e sorriso discreto"
+                   width="400" height="400" loading="lazy">
+              <h4 class="membro__nome">Rafael Lima</h4>
+              <p class="membro__cargo">Responsável financeiro</p>
+              <p class="membro__bio">Contador que garante a transparência e a prestação de contas da ONG.</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- CHAMADA FINAL (CTA) -->
+    <section class="cta-final" id="engaje-se" aria-labelledby="cta-titulo">
+      <h2 class="cta-final__titulo" id="cta-titulo">Faça parte dessa transformação</h2>
+      <p class="cta-final__texto">Seu tempo, sua habilidade ou sua doação podem mudar a história de alguém.</p>
+      <a class="btn btn--primario" href="projetos.html#como-doar">Como ajudar</a>
+    </section>
+
+    <!-- CONTATO DETALHADO: seção dedicada, além do rodapé -->
+    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+      <h2 class="contato__titulo" id="contato-titulo">Fale com a gente</h2>
+
+      <div class="contato__grade">
+        <!-- <address>: semântica específica para informações de contato da organização -->
+        <address class="contato__endereco">
+          <h3 class="contato__subtitulo">Sede</h3>
+          <p class="contato__linha">Rua das Acácias, 245 - Jardim Esperança<br>São Paulo - SP, 01234-567</p>
+
+          <h3 class="contato__subtitulo">Telefones</h3>
+          <!-- tel: permite ligar com um toque no celular -->
+          <p class="contato__linha"><a href="tel:+551133334444">(11) 3333-4444</a> (fixo)</p>
+          <p class="contato__linha"><a href="tel:+5511988887777">(11) 98888-7777</a> (WhatsApp)</p>
+
+          <h3 class="contato__subtitulo">E-mails</h3>
+          <p class="contato__linha"><a href="mailto:contato@raizesdoamanha.org.br">contato@raizesdoamanha.org.br</a></p>
+          <p class="contato__linha"><a href="mailto:voluntarios@raizesdoamanha.org.br">voluntarios@raizesdoamanha.org.br</a></p>
+        </address>
+
+        <aside class="contato__horario" aria-labelledby="horario-titulo">
+          <h3 class="contato__subtitulo" id="horario-titulo">Horário de atendimento</h3>
+          <ul class="contato__lista">
+            <li>Segunda a sexta: 8h às 18h</li>
+            <li>Sábado: 9h às 13h</li>
+            <li>Domingo e feriados: fechado</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ DO SITE ============ -->
+  <!-- <footer> fora de <main> = landmark "contentinfo" -->
+  <footer class="site-footer" id="rodape">
+    <div class="site-footer__container">
+      <section class="site-footer__bloco" aria-labelledby="rodape-sobre">
+        <h2 class="site-footer__titulo" id="rodape-sobre">Raízes do Amanhã</h2>
+        <p class="site-footer__texto">ONG sem fins lucrativos. CNPJ 12.345.678/0001-90.</p>
+      </section>
+
+      <nav class="site-footer__bloco footer-nav" aria-labelledby="rodape-nav">
+        <h2 class="site-footer__titulo" id="rodape-nav">Navegue</h2>
+        <ul class="footer-nav__lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro de voluntários</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__bloco redes-sociais" aria-labelledby="rodape-redes">
+        <h2 class="site-footer__titulo" id="rodape-redes">Redes sociais</h2>
+        <ul class="redes-sociais__lista">
+          <!-- rel="noopener noreferrer" + aria-label explicando que abre em nova aba -->
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da ONG (abre em nova aba)">Instagram</a></li>
+          <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da ONG (abre em nova aba)">Facebook</a></li>
+          <li><a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube da ONG (abre em nova aba)">YouTube</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="site-footer__copy">
+      <small>&copy; 2026 Raízes do Amanhã. Todos os direitos reservados. Projeto acadêmico fictício.</small>
+    </p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
