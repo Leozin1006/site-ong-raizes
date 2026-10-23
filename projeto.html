@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conheça os projetos sociais, educacionais e ambientais da ONG Raízes do Amanhã.">
+
+    <title>Nossos Projetos | Raízes do Amanhã</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pagina-projetos {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+            padding: 48px 0 64px;
+        }
+
+        .projetos-intro {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 40px;
+        }
+
+        .projetos-intro h1 {
+            margin-bottom: 16px;
+        }
+
+        .projetos-grade {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .projeto-card {
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid #e3e8e3;
+            background: #fff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        .projeto-icone {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .projeto-card h2 {
+            font-size: 1.35rem;
+            margin: 0 0 12px;
+        }
+
+        .projeto-card p {
+            line-height: 1.7;
+        }
+
+        .projeto-status {
+            display: inline-block;
+            width: fit-content;
+            margin: 0 0 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #e7f4e8;
+            color: #245c35;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .projeto-card a {
+            margin-top: auto;
+            padding-top: 12px;
+            font-weight: 600;
+            color: #276749;
+        }
+
+        .chamada-voluntariado {
+            margin-top: 48px;
+            padding: 36px 24px;
+            border-radius: 14px;
+            background: #f0f6ee;
+            text-align: center;
+        }
+
+        .chamada-voluntariado p {
+            max-width: 650px;
+            margin: 12px auto 22px;
+            line-height: 1.7;
+        }
+
+        .botao-voluntario {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: #276749;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .botao-voluntario:hover {
+            background: #1e5038;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #d99b26;
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 850px) {
+            .projetos-grade {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 560px) {
+            .pagina-projetos {
+                padding-top: 32px;
+            }
+
+            .projetos-grade {
+                grid-template-columns: 1fr;
+            }
+
+            .projeto-card {
+                padding: 20px;
+            }
+
+            .chamada-voluntariado {
+                padding: 28px 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">
+        Pular para o conteúdo
+    </a>
+
+    <header>
+        <nav aria-label="Navegação principal">
+            <a href="index.html" aria-label="Raízes do Amanhã - página inicial">
+                Raízes do Amanhã
+            </a>
+
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem somos</a>
+            <a href="projetos.html" aria-current="page">Projetos</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="cadastro.html">Seja voluntário</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="pagina-projetos">
+        <section class="projetos-intro">
+            <h1>Nossos projetos</h1>
+
+            <p>
+                Acreditamos que pequenas ações podem gerar grandes
+                transformações. Conheça algumas das iniciativas da
+                Raízes do Amanhã e descubra como fazer parte dessa mudança.
+            </p>
+        </section>
+
+        <section aria-label="Lista de projetos">
+            <div class="projetos-grade">
+
+                <article class="projeto-card">
+                    <div class="projeto-icone" aria-hidden="true">📚</div>
+                    <span class="projeto-status">Educação</span>
+
+                    <h2>Educação para o Futuro</h2>
+
+                    <p>
+                        Incentivar a aprendizagem por meio de atividades
+                        educativas, apoio escolar e acesso ao conhecimento,
+                        contribuindo para novas oportunidades.
+                    </p>
+
+                    <a href="cadastro.html">
+                        Quero ajudar
+                    </a>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-icone" aria-hidden="true">🌱</div>
+                    <span class="projeto-status">Meio ambiente</span>
+
+                    <h2>Raízes Verdes</h2>
+
+                    <p>
+                        Promover a conscientização ambiental, o cuidado
+                        com os espaços comunitários e hábitos mais
+                        sustentáveis no dia a dia.
+                    </p>
+
+                    <a href="cadastro.html">
+                        Quero ajudar
+                    </a>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-icone" aria-hidden="true">🤝</div>
+                    <span class="projeto-status">Ação social</span>
+
+                    <h2>Comunidade Solidária</h2>
+
+                    <p>
+                        Estimular a solidariedade e a participação
+                        comunitária por meio de campanhas, ações
+                        colaborativas e apoio a pessoas em situação
+                        de vulnerabilidade.
+                    </p>
+
+                    <a href="cadastro.html">
+                        Quero ajudar
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="chamada-voluntariado">
+            <h2>Faça parte dessa transformação</h2>
+
+            <p>
+                Seu tempo, suas habilidades e suas ideias podem contribuir
+                para construir um futuro melhor. Cadastre-se como voluntário
+                e descubra como participar.
+            </p>
+
+            <a class="botao-voluntario" href="cadastro.html">
+                Seja voluntário
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span>
+            Raízes do Amanhã. Todos os direitos reservados.
+        </p>
+
+        <a href="index.html">Voltar para a página inicial</a>
+    </footer>
+
+    <script>
+        document.getElementById("ano-atual").textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+</html>
