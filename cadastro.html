@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cadastre-se como voluntário da ONG Raízes do Amanhã e ajude a transformar vidas.">
+
+    <title>Seja Voluntário | Raízes do Amanhã</title>
+
+    <!-- O CSS está na raiz do repositório -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">
+        Pular para o conteúdo
+    </a>
+
+    <header>
+        <nav aria-label="Navegação principal">
+            <a href="index.html" aria-label="Voltar à página inicial">
+                Raízes do Amanhã
+            </a>
+
+            <a href="index.html">Início</a>
+            <a href="index.html#quem-somos">Quem somos</a>
+            <a href="index.html#projetos">Projetos</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="container">
+        <section class="secao-voluntariado">
+            <h1>Seja um voluntário</h1>
+
+            <p>
+                Faça parte da transformação! Preencha o formulário
+                abaixo e conte como você gostaria de contribuir
+                com a ONG Raízes do Amanhã.
+            </p>
+
+            <form id="form-voluntario">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        autocomplete="name"
+                        required
+                        minlength="3">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="voce@exemplo.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(11) 99999-9999"
+                        autocomplete="tel"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="area">Área de interesse</label>
+                    <select id="area" name="area" required>
+                        <option value="">Selecione uma área</option>
+                        <option value="educacao">Educação</option>
+                        <option value="meio-ambiente">Meio ambiente</option>
+                        <option value="assistencia-social">Assistência social</option>
+                        <option value="eventos">Eventos e campanhas</option>
+                        <option value="comunicacao">Comunicação e redes sociais</option>
+                        <option value="administrativo">Apoio administrativo</option>
+                        <option value="outros">Outras atividades</option>
+                    </select>
+                </div>
+
+                <fieldset class="campo">
+                    <legend>Disponibilidade</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="disponibilidade"
+                            value="durante-a-semana">
+                        Durante a semana
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="disponibilidade"
+                            value="finais-de-semana">
+                        Finais de semana
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="disponibilidade"
+                            value="eventos-pontuais">
+                        Eventos pontuais
+                    </label>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="mensagem">
+                        Conte um pouco sobre você (opcional)
+                    </label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="4"
+                        placeholder="Conte como gostaria de contribuir..."></textarea>
+                </div>
+
+                <div class="campo">
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="consentimento"
+                            name="consentimento"
+                            required>
+                        Concordo com o uso dos meus dados para
+                        contato sobre o voluntariado.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">
+                    Enviar cadastro
+                </button>
+
+                <p id="mensagem-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span>
+            Raízes do Amanhã. Todos os direitos reservados.
+        </p>
+
+        <a href="index.html">Voltar para a página inicial</a>
+    </footer>
+
+    <script>
+        document.getElementById("ano-atual").textContent =
+            new Date().getFullYear();
+
+        const formulario = document.getElementById("form-voluntario");
+        const status = document.getElementById("mensagem-status");
+
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            if (!formulario.reportValidity()) {
+                return;
+            }
+
+            const disponibilidade = formulario.querySelectorAll(
+                'input[name="disponibilidade"]:checked'
+            );
+
+            if (disponibilidade.length === 0) {
+                status.textContent =
+                    "Selecione pelo menos uma opção de disponibilidade.";
+                return;
+            }
+
+            status.textContent =
+                "Cadastro de demonstração validado! Nenhum dado foi enviado. " +
+                "Entre em contato com a ONG por outro canal para concluir seu cadastro.";
+
+            formulario.reset();
+        });
+    </script>
+</body>
+</html>
